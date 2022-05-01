@@ -1,0 +1,61 @@
+name: mha_ccg
+description: My Hero Academia Collectable Card Game App
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# App build version
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+# Enable windows:
+# "flutter config --enable-windows-desktop"
+# "flutter create --platforms=windows,android ."
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  #flutter_launcher_name:        # Set app name: flutter pub run flutter_launcher_name:main
+  #flutter_launcher_icons:       # Set app icon: flutter pub run flutter_launcher_icons:main
+  flutter_cards:
+    path: ../flutter_cards/
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter_launcher_name:
+  name: "MHA CCG"
+  # After changing run in terminal:
+  # flutter pub run flutter_launcher_name:main
+
+flutter_icons:    # https://www.woolha.com/tutorials/flutter-change-app-launcher-icon-name-android-ios
+  android: true   # Do generate Android icons
+  ios: false      # Don't generate apple crap
+  image_path: "assets/launcher.png"
+  # After changing run in terminal:
+  # flutter pub run flutter_launcher_icons:main
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application:
+  assets:
+    - assets/MHA_cards.db
+    - assets/image_hold.png
+    - assets/nav_header.png
+    - card_images/
+
+# End
